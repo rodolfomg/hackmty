@@ -126,31 +126,34 @@
         <ul class="sidebar-menu">
           <li class="header">NAVEGACIÓN</li>
           <li class="active treeview">
-            <a href="#">
+            <a href="/">
               <i class="fa fa-dashboard"></i> <span>Inicio</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
             </a>
-            <ul class="treeview-menu">
-              <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            </ul>
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-files-o"></i>
-              <span>Layout Options</span>
+              <i class="fa fa-map-o"></i>
+              <span>Regiones</span>
               <span class="pull-right-container">
-                <span class="label label-primary pull-right">4</span>
+                <span class="label label-primary pull-right">6</span>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-              <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-              <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+              <li><a href="/region/norte"><i class="fa fa-circle-o"></i> Norte</a></li>
+              <li><a href="/region/arqueologica"><i class="fa fa-circle-o"></i> Arqueológica</a></li>
+              <li><a href="/region/metropolitana"><i class="fa fa-circle-o"></i> Metropolitana</a></li>
+              <li><a href="/region/cuna-nuevo-leon"><i class="fa fa-circle-o"></i> Cuna de Nuevo León</a></li>
+              <li><a href="/region/citricola"><i class="fa fa-circle-o"></i> Citrícola</a></li>
+              <li><a href="/region/sur"><i class="fa fa-circle-o"></i> Sur</a></li>
             </ul>
+          </li>
+          <li>
+            <a href="/municipios">
+              <i class="fa fa-map-signs"></i> <span>Municipios</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-red">51</small>
+              </span>
+            </a>
           </li>
           <li>
             <a href="pages/widgets.html">
@@ -223,16 +226,6 @@
               <span class="pull-right-container">
                 <small class="label pull-right bg-red">3</small>
                 <small class="label pull-right bg-blue">17</small>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="pages/mailbox/mailbox.html">
-              <i class="fa fa-envelope"></i> <span>Mailbox</span>
-              <span class="pull-right-container">
-                <small class="label pull-right bg-yellow">12</small>
-                <small class="label pull-right bg-green">16</small>
-                <small class="label pull-right bg-red">5</small>
               </span>
             </a>
           </li>

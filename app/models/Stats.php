@@ -1,6 +1,6 @@
 <?php
 
-class Stats {
+class Stats extends Eloquent {
 	/**
 	 * The database table used by the model.
 	 *

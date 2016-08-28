@@ -1,6 +1,6 @@
 <?php
 
-class Region {
+class Region extends Eloquent {
 	/**
 	 * The database table used by the model.
 	 *

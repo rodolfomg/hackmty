@@ -6,7 +6,7 @@
 			$place->name = Input::get("name");
 			$place->des = Input::get("des");
 			$place->type = Input::get("type");
-			$place->city = /Input::get("city")
+			$place->city = Input::get("city");
 			$place->address = Input::get("address");
 			$place->lat = Input::get("lat");
 			$place->lon = Input::get("lon");
@@ -25,18 +25,25 @@
 			return View::make('insertPlace', array('place' => $place));
 		}
 	
-		static function selectPlacesofType( $id ){
+		function selectPlacesOfType( $id ){
 			$places = DB::table('places_types')->join('places', 'places_types.id',"=" ,'places.type')->where("places.type", "=", $id)->get();//se buscan lugares de un tipo.
 			
-			return $places;
+			return "";
 			//return View::make('selectTest', array('libros'=>$libros));
 		}
 
-		static function selectPlacesofCity( $id ){
-			$places = DB::table('places')->join('cities', 'places.city',"=" ,'cities.id')->where("places.city", "=", $id)->get();//se buscan lugares de una ciudad.
+		function selectPlacesOfCity( $id_city ){
+			$city  = Cities::find($id_city);
+			$places = DB::table('places')->where("places.city", "=", $id_city)->get();//se buscan lugares de una ciudad.
 			
-			return $places;
-			//return View::make('selectTest', array('libros'=>$libros));
+			return View::make('places', array('places'=>$places, 'city'=>$city));
+		}
+
+		function selectPlacesOfCityAndType( $id_type, $id_city ){
+			$city  = Cities::find($id_city);
+			$places = DB::table('places')->where('places.type', "=" ,$id_type)->where("places.city", "=", $id_city)->get();//se buscan lugares de una ciudad.
+			
+			return View::make('places', array('places'=>$places, 'city'=>$city));
 		}
 
 	}

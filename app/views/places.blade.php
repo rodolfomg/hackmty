@@ -9,8 +9,8 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Municipios:
-    <small>Regiones</small>
+    Lugares y Eventos turísticos
+    <small><strong>{{ $city->name }}</strong></small>
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -33,18 +33,20 @@
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Region</th>
+              <th>Dirección</th>
+              <th>Descripción</th>
               <th>Editar</th>
             </tr>
             </thead>
             <tbody>
-              @foreach($cities as $city)
+              @foreach($places as $place)
               <tr>
-                <td>{{ $city->id }}</td>
-                <td>{{ $city->name }}</td>
-                <td>{{ $regions[ $city->region ] }}</td>
+                <td>{{ $place->id }}</td>
+                <td>{{ $place->name }}</td>
+                <td>{{ $place->address }}</td>
+                <td>{{ $place->desc }}</td>
                 <td align="center">
-                  <a href="/municipios/{{ $city->id }}" class="btn bg-purple"> Ver más </a>
+                  <a href="#" class="btn bg-purple"> Ver más </a>
                 </td>
               </tr>
               @endforeach
@@ -53,7 +55,8 @@
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Region</th>
+              <th>Dirección</th>
+              <th>Descripción</th>
               <th>Editar</th>
             </tr>
             </tfoot>

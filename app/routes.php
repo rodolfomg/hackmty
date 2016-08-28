@@ -19,11 +19,12 @@ Route::get('forms', function(){
 	return View::make('forms');
 });
 
-Route::get('municipios', function(){
+Route::post('municipios', function(){
 	$region['name'] = "Norte";
 	return View::make('cities', array('region' => $region));
 });
 
-//Route::get('municipios', array('use','CitiesController@loadCities'));
+Route::get('municipios', array('uses' => 'CitiesController@selectCities'));
 
-//Route::get('municipios/{id}', array('use','CitiesController@loadCity'));
+Route::get('municipios/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCity'));
+Route::get('municipios/{id_type}/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCityAndType'));

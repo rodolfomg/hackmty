@@ -1,6 +1,6 @@
 <?php
 
-class UserTypes {
+class UserTypes extends Eloquent {
 	/**
 	 * The database table used by the model.
 	 *
