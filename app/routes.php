@@ -31,6 +31,7 @@ Route::get('municipios', function(){
 });
 
 Route::get('municipios', array('uses' => 'CitiesController@selectCities'));
+Route::get('indicadores', array('uses' => 'PlacesController@getIndicators'));
 
 Route::get('municipios/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCity'));
-Route::get('municipios/{id_type}/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCityAndType'));
+Route::get('places/{id_type}/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCityAndType'));
