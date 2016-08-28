@@ -35,15 +35,20 @@
 		function selectPlacesOfCity( $id_city ){
 			$city  = Cities::find($id_city);
 			$places = DB::table('places')->where("places.city", "=", $id_city)->get();//se buscan lugares de una ciudad.
+			$types2 = DB::table('places_types')->lists("name","id");
+			$types = array_merge(array(0=>'Todas las categorías'),$types2);
 			
-			return View::make('places', array('places'=>$places, 'city'=>$city));
+			return View::make('places', array('places'=>$places, 'city'=>$city, 'types'=>$types));
 		}
 
 		function selectPlacesOfCityAndType( $id_type, $id_city ){
-			$city  = Cities::find($id_city);
-			$places = DB::table('places')->where('places.type', "=" ,$id_type)->where("places.city", "=", $id_city)->get();//se buscan lugares de una ciudad.
+			if($id_type == 0) $places = DB::table('places')->where("places.city", "=", $id_city)->get();//se buscan lugares de una ciudad.
+			else $places = DB::table('places')->where('places.type', "=" ,$id_type)->where("places.city", "=", $id_city)->get();//se buscan lugares de una ciudad.
 			
-			return View::make('places', array('places'=>$places, 'city'=>$city));
+			echo json_encode($places);
+
+			return "";
+			return View::make('table', array('places'=>$places));
 		}
 
 	}
