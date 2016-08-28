@@ -19,6 +19,18 @@ Route::get('forms', function(){
 	return View::make('forms');
 });
 
+Route::get('city', function(){
+	return View::make('city');
+});
+
+Route::get('register', function(){
+	return View::make('register');
+});
+
+Route::get('login', function(){
+	return View::make('login');
+});
+
 Route::get('registerPlaces', function(){
 	$registerTypes = DB::table('places_types')->lists('name', 'id');
 	$cities = DB::table('cities')->lists('name', 'id');
