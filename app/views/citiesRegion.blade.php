@@ -9,8 +9,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Municipios:
-    <small>Regiones</small>
+    Municipios de la region {{ $region }}
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -33,7 +32,6 @@
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Region</th>
               <th>Ver</th>
             </tr>
             </thead>
@@ -42,7 +40,6 @@
               <tr>
                 <td>{{ $city->id }}</td>
                 <td>{{ $city->name }}</td>
-                <td>{{ $regions[ $city->region ] }}</td>
                 <td align="center">
                   <a href="/municipios/{{ $city->id }}" class="btn bg-purple"> Ver más </a>
                 </td>
@@ -53,7 +50,6 @@
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>Region</th>
               <th>Editar</th>
             </tr>
             </tfoot>

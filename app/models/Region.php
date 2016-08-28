@@ -6,7 +6,7 @@ class Region extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'region';
+	protected $table = 'regions';
 
 
 }

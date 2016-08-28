@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function(){
-	return View::make('hello');
+	return View::make('city');
 });
 
 Route::get('forms', function(){
@@ -45,5 +45,6 @@ Route::get('municipios', function(){
 Route::get('municipios', array('uses' => 'CitiesController@selectCities'));
 Route::get('indicadores', array('uses' => 'PlacesController@getIndicators'));
 
+Route::get('region/{id}', array('uses' => 'CitiesController@selectCitiesofRegion'));
 Route::get('municipios/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCity'));
 Route::get('places/{id_type}/{id_city}', array('uses' => 'PlacesController@selectPlacesOfCityAndType'));

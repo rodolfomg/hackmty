@@ -9,10 +9,11 @@
 		}
 
 		function selectCitiesofRegion( $id ){
-			$cities = DB::table('cities')->join('regions', 'cities.region',"=" ,'regions.id')->where("cities.region", "=", $id)->get();//busca municipios de una region.
+			$region = Region::find($id);
+
+			$cities = DB::table('cities')->where("cities.region", "=", $id)->get();//busca municipios de una region.
 			
-			return $cities;
-			//return View::make('selectTest', array('libros'=>$libros));
+			return View::make('citiesRegion', array('cities'=>$cities, 'region'=>$region->name));
 		}
 
 	}

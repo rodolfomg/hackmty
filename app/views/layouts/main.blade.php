@@ -45,7 +45,7 @@
   <div class="wrapper">
     <header class="main-header">
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="/" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>T</b>NL</span>
         <!-- logo for regular state and mobile devices -->
@@ -91,20 +91,7 @@
                   </div>
                   <!-- /.row -->
                 </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                  <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  </div>
-                  <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                  </div>
-                </li>
               </ul>
-            </li>
-            <!-- Control Sidebar Toggle Button -->
-            <li>
-              <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
             </li>
           </ul>
         </div>
@@ -141,12 +128,12 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="/region/norte"><i class="fa fa-circle-o"></i> Norte</a></li>
-              <li><a href="/region/arqueologica"><i class="fa fa-circle-o"></i> Arqueológica</a></li>
-              <li><a href="/region/metropolitana"><i class="fa fa-circle-o"></i> Metropolitana</a></li>
-              <li><a href="/region/cuna-nuevo-leon"><i class="fa fa-circle-o"></i> Cuna de Nuevo León</a></li>
-              <li><a href="/region/citricola"><i class="fa fa-circle-o"></i> Citrícola</a></li>
-              <li><a href="/region/sur"><i class="fa fa-circle-o"></i> Sur</a></li>
+              <li><a href="/region/1"><i class="fa fa-circle-o"></i> Norte</a></li>
+              <li><a href="/region/2"><i class="fa fa-circle-o"></i> Arqueológica</a></li>
+              <li><a href="/region/3"><i class="fa fa-circle-o"></i> Metropolitana</a></li>
+              <li><a href="/region/4"><i class="fa fa-circle-o"></i> Cuna de Nuevo León</a></li>
+              <li><a href="/region/5"><i class="fa fa-circle-o"></i> Citrícola</a></li>
+              <li><a href="/region/6"><i class="fa fa-circle-o"></i> Sur</a></li>
             </ul>
           </li>
           <li>
@@ -204,15 +191,6 @@
     <div class="content-wrapper">
       @yield('content')
     </div>
-
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.6
-      </div>
-      <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-      reserved.
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
