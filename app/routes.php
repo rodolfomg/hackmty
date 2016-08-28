@@ -19,7 +19,13 @@ Route::get('forms', function(){
 	return View::make('forms');
 });
 
-Route::post('municipios', function(){
+Route::get('registerPlaces', function(){
+	$registerTypes = DB::table('places_types')->lists('name', 'id');
+	$cities = DB::table('cities')->lists('name', 'id');
+	return View::make('registerPlaces', array('types' => $registerTypes, 'city'=>$cities));
+});
+
+Route::get('municipios', function(){
 	$region['name'] = "Norte";
 	return View::make('cities', array('region' => $region));
 });
