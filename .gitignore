@@ -1,3 +1,4 @@
 vendor/*
 bootstrap/*
-aapp/storage/*
+app/storage/*
+*.zip

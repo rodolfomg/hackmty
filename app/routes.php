@@ -18,3 +18,12 @@ Route::get('/', function(){
 Route::get('forms', function(){
 	return View::make('forms');
 });
+
+Route::get('municipios', function(){
+	$region['name'] = "Norte";
+	return View::make('cities', array('region' => $region));
+});
+
+//Route::get('municipios', array('use','CitiesController@loadCities'));
+
+//Route::get('municipios/{id}', array('use','CitiesController@loadCity'));
