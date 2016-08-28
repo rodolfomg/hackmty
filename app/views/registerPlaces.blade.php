@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-    
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -29,10 +28,18 @@
             <!-- form start -->
             <form role="form">
               <div class="box-body">
+                <div class="form-group">
+                  <label>Tipo de atracción</label>
+                  {{ Form::select('type', $types, 1, array('class'=>"form-control select2", 'style'=>"width: 20%")) }}
+                </div>
                 <div class="form-group" >
                   <label>Nombre</label>
                   <input type="text" class="form-control" placeholder="Ej. Cola de caballo." style="width: 75%;">
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+                  <label>Municipio</label>
+                  {{ Form::select('city', $city, 1, array('class'=>"form-control select2", 'style'=>"width: 20%")) }}
                 </div>
                 <div class="form-group">
                   <label>Descripción</label>
@@ -40,37 +47,31 @@
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group">
-                  <label>Tipo de atracción</label>
-                  <select class="form-control select2" style="width: 25%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Municipio</label>
-                  <select class="form-control select2" style="width: 25%;">
-                    <option selected="selected">Alabama</option>
-                    <option>Alaska</option>
-                    <option>California</option>
-                    <option>Delaware</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Washington</option>
-                  </select>
-                </div>
-                <div class="form-group">
                   <label>Dirección</label>
                   <input type="text" class="form-control" placeholder="Ej. Calle #555, Colonia. Santiago, Nuevo León." style="width: 75%;">
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
+                <div>
+                  <form>
+                    <label>Telefono: </label>
+                    <input type="tel" name="usrtel" placeholder="+528117720564">
+                  </form>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label>Sitio web: </label>
+                  <input type="text" class="form-control" placeholder="www.paginaweb.com" style="width: 75%;">
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <br>
                 <div class="form-group">
                   <label for="exampleInputFile">Subir imagen</label>
                   <input type="file" id="exampleInputFile">
+                </div>
+                <div class="form-group">
+                  <label>Comentarios adicionales: </label>
+                  <input type="text" class="form-control" placeholder="Ej. Ambiente cien por ciento familiar." style="width: 75%;">
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
               </div>
             </form>
@@ -129,6 +130,6 @@
 
       <!-- /.row -->
     </section>
- <!-- Select2 -->
-  <link rel="stylesheet" href="/assets/plugins/select2/select2.min.css">
+<!-- Select2 -->
+<script src="/assets/plugins/select2/select2.full.min.js"></script>
 @stop
